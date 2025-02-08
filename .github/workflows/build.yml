@@ -25,25 +25,25 @@ jobs:
 
             - name: Clone Repository
               run: |
-                git clone --recursive https://github.com/TurboWarp/desktop ~\turbowarp-desktop
-                cd ~\turbowarp-desktop
+                git clone --recursive https://github.com/TurboWarp/desktop C:\turbowarp-desktop
+                cd C:\turbowarp-desktop
                 git submodule init
                 git submodule update
 
             - name: Install Dependencies
               run: |
-                cd ~\turbowarp-desktop
+                cd C:\turbowarp-desktop
                 npm ci
                 npm run fetch
 
             - name: Build
               run: |
-                cd ~\turbowarp-desktop
+                cd C:\turbowarp-desktop
                 npm run webpack:prod
 
             - name: Pack
               run: |
-                cd ~\turbowarp-desktop
+                cd C:\turbowarp-desktop
                 npx electron-builder --windows nsis --x64
 
 permissions:
