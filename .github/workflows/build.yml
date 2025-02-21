@@ -49,7 +49,7 @@ jobs:
             - name: Upload x64 Artifact
               uses: actions/upload-artifact@v4
               with:
-                name: TurboWarp Setup x64
+                name: TurboWarp Setup Windows x64
                 path: C:\turbowarp-desktop\dist\TurboWarp Setup* x64.exe
                 retention-days: 7
                 compression-level: 9
@@ -57,7 +57,7 @@ jobs:
             - name: Upload ia32 Artifact
               uses: actions/upload-artifact@v4
               with:
-                name: TurboWarp Setup ia32
+                name: TurboWarp Setup Windows ia32
                 path: C:\turbowarp-desktop\dist\TurboWarp Setup* ia32.exe
                 retention-days: 7
                 compression-level: 9
@@ -65,7 +65,7 @@ jobs:
             - name: Upload arm64 Artifact
               uses: actions/upload-artifact@v4
               with:
-                name: TurboWarp Setup arm64
+                name: TurboWarp Setup Windows arm64
                 path: C:\turbowarp-desktop\dist\TurboWarp Setup* arm64.exe
                 retention-days: 7
                 compression-level: 9
